@@ -1,0 +1,232 @@
+{
+  "meta": {
+    "creator": "cds-dk 4.9.2"
+  },
+  "$version": "2.0",
+  "definitions": {
+    "ZDEMOCDS10_CDS": {
+      "kind": "service",
+      "@cds.external": true,
+      "@m.IsDefaultEntityContainer": "true",
+      "@sap.message.scope.supported": "true",
+      "@sap.supported.formats": "atom json xlsx"
+    },
+    "ZDEMOCDS10_CDS.zdemocds10": {
+      "kind": "entity",
+      "@cds.persistence.skip": true,
+      "@sap.creatable": "false",
+      "@sap.updatable": "false",
+      "@sap.deletable": "false",
+      "@sap.content.version": "1",
+      "@sap.label": "democds ds workzone poc",
+      "elements": {
+        "fclt_id": {
+          "key": true,
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "설비ID"
+        },
+        "qcode": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "Q코드"
+        },
+        "cost1": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 10,
+          "@sap.label": "취득가"
+        },
+        "curr1": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "취득가단위"
+        },
+        "cost2": {
+          "type": "cds.Integer64",
+          "@sap.label": "장부가"
+        },
+        "curr2": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "장부가단위"
+        },
+        "date1": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "App일자"
+        },
+        "asst_no": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "자산번호"
+        },
+        "asst_type1": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "자산유형0"
+        },
+        "asst_type2": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "자산유형1"
+        },
+        "ds02_mst_code": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "마스터코드"
+        },
+        "asst_status": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "자산상태"
+        },
+        "fclt_area": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "설비Area"
+        },
+        "model": {
+          "type": "cds.String",
+          "length": 2,
+          "@sap.label": "Model"
+        },
+        "serial_no": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "시리얼번호"
+        },
+        "ds03_mst_code": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "마스터코드"
+        },
+        "fclt_status": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "설비상태"
+        },
+        "ds03_ams_status": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "AMS상태"
+        },
+        "rgst_type": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "등록유형"
+        },
+        "install_stdt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "설치시작일"
+        },
+        "install_schd_eddt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "설치예정시작일"
+        },
+        "install_eddt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "설치종료일"
+        },
+        "dmsh_stdt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "철거시작일"
+        },
+        "dmsh_schd_eddt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "철거시작예정일"
+        },
+        "dmsh_eddt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "철거종료일"
+        },
+        "asst_div": {
+          "type": "cds.String",
+          "length": 5,
+          "@sap.label": "자산구분"
+        },
+        "use_org": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "사용부서"
+        },
+        "lfcycl_mng_org": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "생애관리부서"
+        },
+        "lfcycl_mngr": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "생애관리자"
+        },
+        "inout_div": {
+          "type": "cds.String",
+          "length": 8,
+          "@sap.label": "사내외구분"
+        },
+        "district": {
+          "type": "cds.String",
+          "length": 12,
+          "@sap.label": "District"
+        },
+        "building": {
+          "type": "cds.String",
+          "length": 20,
+          "@sap.label": "Building"
+        },
+        "floor": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Floor"
+        },
+        "line": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Line"
+        },
+        "bay": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Bay"
+        },
+        "site": {
+          "type": "cds.String",
+          "length": 3,
+          "@sap.label": "Site"
+        },
+        "gbm": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "사업부"
+        },
+        "gain_dt": {
+          "type": "cds.Date",
+          "@sap.display.format": "Date",
+          "@sap.label": "취득일자"
+        },
+        "eam_status": {
+          "type": "cds.String",
+          "length": 10,
+          "@sap.label": "EAM상태"
+        },
+        "ds04_ams_status": {
+          "type": "cds.String",
+          "length": 6,
+          "@sap.label": "AMS상태"
+        },
+        "issue_status": {
+          "type": "cds.String",
+          "length": 1,
+          "@sap.label": "상태이상"
+        }
+      }
+    }
+  }
+}

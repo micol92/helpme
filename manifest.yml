@@ -1,0 +1,16 @@
+---
+applications:
+  - name: connect-rfc
+    path: srv/target/products-service-exec.jar
+    random-route: true
+    buildpacks:
+    - sap_java_buildpack
+    
+    env:
+      SAP_JWT_TRUST_ACL: '[{"clientid":"*","identityzone":"*"}]'
+      xsuaa_connectivity_instance_name: "MYERPS20-xsuaa"
+
+    services:
+     - MYERPS20-dest
+     - MYERPS20-conn
+     - MYERPS20-xsuaa
